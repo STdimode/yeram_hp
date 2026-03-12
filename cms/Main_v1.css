@@ -68,20 +68,17 @@ External fonts fallback
 
 @font-face {
     font-family: 'Noto Sans KR';
-    src: url('webfont/NotoSansKR/NotoSansKR-Regular.woff2') format('woff2'),
-         url('webfont/NotoSansKR/NotoSansKR-Regular.woff') format('woff');
+    src: url('webfont/NotoSansKR/NotoSansKR-Regular.ttf') format('truetype');
     font-weight: 400;
 }
 @font-face {
     font-family: 'Noto Sans KR';
-    src: url('webfont/NotoSansKR/NotoSansKR-Medium.woff2') format('woff2'),
-         url('webfont/NotoSansKR/NotoSansKR-Medium.woff') format('woff');
+    src: url('webfont/NotoSansKR/NotoSansKR-Medium.ttf') format('truetype');
     font-weight: 500;
 }
 @font-face {
     font-family: 'Noto Sans KR';
-    src: url('webfont/NotoSansKR/NotoSansKR-Bold.woff2') format('woff2'),
-         url('webfont/NotoSansKR/NotoSansKR-Bold.woff') format('woff');
+    src: url('webfont/NotoSansKR/NotoSansKR-Bold.ttf') format('truetype');
     font-weight: 700;
 }
 @font-face {
@@ -106,7 +103,7 @@ External fonts fallback
 }
 @font-face {
     font-family: 'HsBombaram20';
-    src: url('webfont/HsBombaram/HSBombaram.woff') format('woff');
+    src: url('webfont/HsBombaram/HsBombaram20.ttf') format('truetype');
     font-weight: normal;
 }
 
