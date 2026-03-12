@@ -7,26 +7,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const root = document.querySelector('.cms-content-root');
     if (!root) return;
 
-    root.innerHTML = `
-        <div class="app-wrapper">
-            <!-- HeroSlider will go here -->
-            <div id="hero-slider-container"></div>
-            <!-- InteractiveGrid will go here -->
-            <div id="interactive-grid-container" class="scroll-fade-up"></div>
-            <!-- StickyHorizontalScroll will go here -->
-            <div id="sticky-horizontal-scroll-container" class="scroll-fade-up"></div>
-            <!-- DynamicToggle will go here -->
-            <div id="dynamic-toggle-container" class="scroll-fade-up"></div>
-            <!-- CommunityCards will go here -->
-            <div id="community-cards-container" class="scroll-fade-up"></div>
-            <!-- TabbedGallery will go here -->
-            <div id="tabbed-gallery-container" class="scroll-fade-up"></div>
-            <!-- Footer will go here -->
-            <div id="footer-container"></div>
-        </div>
-    `;
+    // root.innerHTML injection removed (now in cshtml)
 
     initHeroSlider();
+    initInteractiveGrid();
+    initStickyHorizontalScroll();
+    initDynamicToggle();
+    initCommunityCards();
+    initTabbedGallery();
+    initFooter();
+    initScrollFadeUp();
 });
 
 function initHeroSlider() {
@@ -39,68 +29,18 @@ function initHeroSlider() {
     // The prompt says: "외부 URL(http...)은 유지하고, 로컬 에셋은 /UserData/... 경로로 변환하세요."
     const slides = [
         {
-            image: "https://images.unsplash.com/photo-1768569391908-5c92c83744f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaHVyY2glMjBpbnRlcmlvciUyMGVtcHR5JTIwcGV3cyUyMGFyY2hpdGVjdHVyZXxlbnwxfHx8fDE3NzMyMjUxNTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+            image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg",
             title: "은혜의 빛으로",
             subtitle: "Grace Community Church"
         },
         {
-            image: "https://images.unsplash.com/photo-1589198234915-b57a9ad85d1e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXRoZWRyYWwlMjBzdGFpbmVkJTIwZ2xhc3MlMjB3aW5kb3clMjBsaWdodHxlbnwxfHx8fDE3NzMyMjUxNTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+            image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg",
             title: "함께 걷는 믿음의 길",
             subtitle: "Walking Together in Faith"
         }
     ];
 
-    container.innerHTML = `
-        <section class="hero-slider">
-            <div id="hero-slides-wrapper">
-                <!-- Slides will be injected here -->
-            </div>
 
-            <!-- CI Symbol -->
-            <div class="hero-ci-symbol">
-                <div class="hero-ci-logo-wrap">
-                    <div class="hero-ci-logo-box">
-                        <span class="hero-ci-logo-text">GCC</span>
-                    </div>
-                    <span class="hero-ci-church-name">Grace Community Church</span>
-                </div>
-                <nav class="hero-nav">
-                    <a href="#" class="hero-nav-item">교회소개</a>
-                    <a href="#" class="hero-nav-item">예배안내</a>
-                    <a href="#" class="hero-nav-item">말씀</a>
-                    <a href="#" class="hero-nav-item">커뮤니티</a>
-                    <a href="#" class="hero-nav-item">오시는 길</a>
-                    <button class="hero-menu-btn" aria-label="메뉴" id="hero-menu-open-btn">
-                        <span class="hero-menu-btn-bar"></span>
-                        <span class="hero-menu-btn-bar"></span>
-                        <span class="hero-menu-btn-bar"></span>
-                    </button>
-                </nav>
-            </div>
-
-            <!-- Mega Menu Placeholder -->
-            <div id="mega-menu-container"></div>
-
-            <!-- Pagination -->
-            <div class="hero-pagination">
-                <button class="hero-page-btn" id="hero-prev-btn">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                        <path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </button>
-                <div class="hero-page-indicator">
-                    <span class="hero-page-current" id="hero-current-text">01</span>
-                    <span class="hero-page-divider">/</span>
-                    <span class="hero-page-total" id="hero-total-text">02</span>
-                </div>
-                <button class="hero-page-btn" id="hero-next-btn">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                        <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </button>
-            </div>
-        </section>
-    `;
 
     const slidesWrapper = document.getElementById('hero-slides-wrapper');
     const prevBtn = document.getElementById('hero-prev-btn');
@@ -118,7 +58,10 @@ function initHeroSlider() {
 
         const newSlide = document.createElement('div');
         newSlide.className = `hero-slide ${enterClass}`;
-        newSlide.innerHTML = `<div class="hero-slide-bg" style="background-image: url('${slides[index].image}');"></div>`;
+        const slideBg = document.createElement("div");
+        slideBg.className = "hero-slide-bg";
+        slideBg.style.backgroundImage = `url('${slides[index].image}')`;
+        newSlide.appendChild(slideBg);
         slidesWrapper.appendChild(newSlide);
 
         // Force reflow
@@ -147,7 +90,10 @@ function initHeroSlider() {
     // Initial render
     const initSlide = document.createElement('div');
     initSlide.className = 'hero-slide active';
-    initSlide.innerHTML = `<div class="hero-slide-bg" style="background-image: url('${slides[current].image}');"></div>`;
+    const slideBg = document.createElement("div");
+    slideBg.className = "hero-slide-bg";
+    slideBg.style.backgroundImage = `url('${slides[current].image}')`;
+    initSlide.appendChild(slideBg);
     slidesWrapper.appendChild(initSlide);
 
     const nextSlide = () => {
@@ -317,37 +263,7 @@ function initMegaMenu() {
         `;
     });
 
-    container.innerHTML = `
-        <div class="mega-menu-overlay" id="mega-menu-overlay">
-            <div class="mega-menu-header">
-                <div class="hero-ci-logo-wrap">
-                    <div class="mega-menu-ci-box">
-                        <span class="mega-menu-ci-text">GCC</span>
-                    </div>
-                    <span class="mega-menu-church-name">Grace Community Church</span>
-                </div>
-                <button class="mega-menu-close-btn" id="mega-menu-close-btn" aria-label="닫기">
-                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-                        <path d="M6 6L22 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                        <path d="M22 6L6 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                    </svg>
-                </button>
-            </div>
 
-            <div class="mega-menu-grid-wrap">
-                <div class="mega-menu-grid">
-                    ${gridHtml}
-                </div>
-            </div>
-
-            <div class="mega-menu-footer">
-                <div class="mega-menu-footer-inner">
-                    <span class="mega-menu-footer-text">&copy; 2026 동래중앙교회</span>
-                    <span class="mega-menu-footer-text">Tel. 051-555-1234</span>
-                </div>
-            </div>
-        </div>
-    `;
 
     const openBtn = document.getElementById('hero-menu-open-btn');
     const closeBtn = document.getElementById('mega-menu-close-btn');
@@ -399,8 +315,8 @@ function initInteractiveGrid() {
 
     // Notice bg image from original source was an imported asset, we use a placeholder or the provided format
     // Replace with provided format if given
-    const noticeBg = "https://images.unsplash.com/photo-1510590337019-5ef8d3d32116?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=80";
-    const welcomeBg = "https://images.unsplash.com/photo-1501082123646-4978a639c397?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBjaHVyY2glMjBhcmNoaXRlY3R1cmUlMjBtaW5pbWFsfGVufDF8fHx8MTc3MzIyNTE1Nnww&ixlib=rb-4.1.0&q=80&w=1080";
+    const noticeBg = "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg";
+    const welcomeBg = "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg";
 
     const svgUserPlus = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" class="igrid-icon"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" x2="19" y1="8" y2="14"/><line x1="22" x2="16" y1="11" y2="11"/></svg>`;
     const svgClock = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" class="igrid-icon"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`;
@@ -410,66 +326,7 @@ function initInteractiveGrid() {
     const svgNewspaper = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" class="igrid-icon"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>`;
     const svgFileText = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" class="igrid-icon"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>`;
 
-    container.innerHTML = `
-        <section class="igrid-section">
-            <div class="igrid-container">
-                <!-- Welcome Card -->
-                <div class="igrid-card welcome">
-                    <div class="igrid-bg" style="background-image: url('${welcomeBg}');"></div>
-                    <div class="igrid-overlay"></div>
-                    <div class="igrid-content">
-                        <p class="igrid-label">Welcome</p>
-                        <h3 class="igrid-title">처음오셨나요?</h3>
-                        <div class="igrid-desc-wrap">
-                            <p class="igrid-desc">동래중앙교회에 오신것을 환영합니다.<br>온 열방을 향하여 복음을 힘써 전하는 건강한 교회,<br>동래중앙교회입니다.</p>
-                        </div>
-                        <div class="igrid-links-wrap">
-                            <button class="igrid-link-btn">
-                                <div class="igrid-icon-box">${svgUserPlus}</div>
-                                <span class="igrid-link-text">새가족 안내<span class="igrid-link-underline"></span></span>
-                            </button>
-                            <button class="igrid-link-btn">
-                                <div class="igrid-icon-box">${svgClock}</div>
-                                <span class="igrid-link-text">예배시간 안내<span class="igrid-link-underline"></span></span>
-                            </button>
-                            <button class="igrid-link-btn">
-                                <div class="igrid-icon-box">${svgMapPin}</div>
-                                <span class="igrid-link-text">오시는 길<span class="igrid-link-underline"></span></span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Notice Card -->
-                <div class="igrid-card notice">
-                    <div class="igrid-bg" style="background-image: url('${noticeBg}');"></div>
-                    <div class="igrid-overlay"></div>
-                    <div class="igrid-content">
-                        <p class="igrid-label">Notice</p>
-                        <h3 class="igrid-title">성도를 위한 안내</h3>
-                        <div class="igrid-desc-wrap">
-                            <p class="igrid-desc">교회의 주요 공지사항 및<br>예배를 위한 주보를 편하게 확인해보시기 바랍니다.</p>
-                        </div>
-                        <div class="igrid-links-wrap">
-                            <button class="igrid-link-btn">
-                                <div class="igrid-icon-box">${svgMegaphone}</div>
-                                <span class="igrid-link-text">공지사항<span class="igrid-link-underline"></span></span>
-                            </button>
-                            <button class="igrid-link-btn">
-                                <div class="igrid-icon-box">${svgNewspaper}</div>
-                                <span class="igrid-link-text">주보<span class="igrid-link-underline"></span></span>
-                            </button>
-                            <button class="igrid-link-btn">
-                                <div class="igrid-icon-box">${svgFileText}</div>
-                                <span class="igrid-link-text">방송자막요청<span class="igrid-link-underline"></span></span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    `;
-}
+    }
 
 document.addEventListener("DOMContentLoaded", () => {
     // Other inits might be called in the single event listener
@@ -487,7 +344,7 @@ function initStickyHorizontalScroll() {
             verse: "마가복음10장46-52절",
             pastor: "정대훈 목사",
             date: "2026.03.08",
-            image: "https://images.unsplash.com/photo-1728062816724-57b626d1affc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkcmFtYXRpYyUyMHNreSUyMGNsb3VkcyUyMHN1bmxpZ2h0fGVufDF8fHx8MTc3MzIzNTU2N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+            image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg",
         },
         {
             title: "주일 찬양 예배",
@@ -495,7 +352,7 @@ function initStickyHorizontalScroll() {
             verse: "누가복음 9장57-62절",
             pastor: "강신영 목사",
             date: "2026.03.08",
-            image: "https://images.unsplash.com/photo-1747079310346-1eb40f39bde0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnb2xkZW4lMjBzdW5zZXQlMjBjbG91ZHMlMjBuYXR1cmV8ZW58MXx8fHwxNzczMjM1NTY3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+            image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg",
         },
         {
             title: "수요말씀사경회",
@@ -503,7 +360,7 @@ function initStickyHorizontalScroll() {
             verse: "에베소서 2장11-22절",
             pastor: "박세영 목사",
             date: "2026.03.04",
-            image: "https://images.unsplash.com/photo-1768938360590-bf49368f0e9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2Z0JTIwd2hpdGUlMjBjbG91ZHMlMjBibHVlJTIwc2t5JTIwcGVhY2VmdWx8ZW58MXx8fHwxNzczMjM1NTY3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+            image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg",
         },
         {
             title: "금요성령기도회",
@@ -511,7 +368,7 @@ function initStickyHorizontalScroll() {
             verse: "",
             pastor: "ooo 목사",
             date: "2026.03.13",
-            image: "https://images.unsplash.com/photo-1655058402270-de7dd5838ed5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuaWdodCUyMHNreSUyMHN0YXJzJTIwZGFyayUyMGNsb3Vkc3xlbnwxfHx8fDE3NzMyMzU2Mzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+            image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg",
         }
     ];
 
@@ -538,19 +395,7 @@ function initStickyHorizontalScroll() {
         `;
     });
 
-    container.innerHTML = `
-        <section class="shs-section" id="shs-section">
-            <div class="shs-sticky-wrap" id="shs-sticky-wrap">
-                <div class="shs-header">
-                    <span class="shs-label" style="color: var(--shs-accent-color)">Weekly Schedule</span>
-                    <h2 class="shs-title" style="color: var(--shs-title-color)">예배와 모임</h2>
-                </div>
-                <div class="shs-scroll-wrap" id="shs-scroll-wrap">
-                    ${cardsHtml}
-                </div>
-            </div>
-        </section>
-    `;
+
 
     const section = document.getElementById('shs-section');
     const stickyWrap = document.getElementById('shs-sticky-wrap');
@@ -654,7 +499,7 @@ function initDynamicToggle() {
             title: "다음세대",
             subtitle: "Next Generation",
             description: "미래의 주역인 영유아부터 청년까지, 하나님의 말씀 안에서 꿈을 키우고 건강하게 성장하는 신앙 교육 공동체입니다.",
-            image: "https://images.unsplash.com/photo-1518130064817-2bcb096c1303?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwYXBlciUyMGFpcnBsYW5lJTIwZmx5aW5nJTIwYmx1ZSUyMHNreXxlbnwxfHx8fDE3NzMyMzgxNTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+            image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg",
             links: ["영유아부", "유치부", "유년부", "소년부", "중등부", "고등부", "청년부"]
         },
         {
@@ -662,7 +507,7 @@ function initDynamicToggle() {
             title: "팀사역",
             subtitle: "Ministry",
             description: "국내외 선교, 문화 사역, 교육 및 봉사 등 각자의 은사에 맞춰 하나님의 사랑을 실천하고 세상을 섬기는 전문 사역 팀들의 모임입니다.",
-            image: "https://images.unsplash.com/photo-1608782583532-c551f3a0e8ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwYXN0ZWwlMjBwaW5rJTIwYmx1ZSUyMGNvdHRvbiUyMGNhbmR5JTIwc2t5JTIwc3Vuc2V0fGVufDF8fHx8MTc3MzIzODA4N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+            image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg",
             links: ["국내선교", "해외선교", "문화사역", "예람전도대", "새가족 양육", "중보기도대", "늘푸른대학", "사회봉사"]
         },
         {
@@ -670,7 +515,7 @@ function initDynamicToggle() {
             title: "온라인 행정",
             subtitle: "Administration",
             description: "성도님들의 원활한 교회 활동을 위해 장소 및 차량 예약, 각종 증명서 발급 등을 언제 어디서나 간편하게 처리할 수 있는 지원 서비스입니다.",
-            image: "https://images.unsplash.com/photo-1636569698616-94d5307b956b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsYXB0b3AlMjBjbG9zZXVwJTIwa2V5Ym9hcmQlMjBtaW5pbWFsJTIwY2xlYW58ZW58MXx8fHwxNzczMjM4MTU5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+            image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg",
             links: ["차량예약", "장소예약", "비품수리신청", "증명서 발급"]
         }
     ];
@@ -718,21 +563,7 @@ function initDynamicToggle() {
         `;
     });
 
-    container.innerHTML = `
-        <section class="dt-section" id="dt-section" style="height: ${scrollHeight}vh;">
-            <div class="dt-sticky-wrap">
-                <div class="dt-content">
-                    <div class="dt-header">
-                        <span class="dt-label">Ministry</span>
-                        <h2 class="dt-title">사역과 프로그램</h2>
-                    </div>
-                    <div class="dt-stack-container" id="dt-stack-container">
-                        ${cardsHtml}
-                    </div>
-                </div>
-            </div>
-        </section>
-    `;
+
 
     const section = document.getElementById('dt-section');
     const stackContainer = document.getElementById('dt-stack-container');
@@ -846,31 +677,31 @@ function initCommunityCards() {
             id: 1,
             title: "은장회/안수집사회/\n남선교회",
             description: "기도로 교회를 든든히 세우고 뜨거운 열정으로 헌신하며 본을 보이는 남성 공동체입니다.",
-            image: "https://images.unsplash.com/photo-1673429249844-b14f29e619b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcm9zcyUyMHNpbGhvdWV0dGUlMjBjaHVyY2glMjByb29mdG9wfGVufDF8fHx8MTc3MzIyNTE1N3ww&ixlib=rb-4.1.0&q=80&w=1080"
+            image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg"
         },
         {
             id: 2,
             title: "루디아권사회/\n여선교회",
             description: "사랑의 섬김과 간절한 기도로 공동체를 따뜻하게 보듬는 아름다운 여성 공동체입니다.",
-            image: "https://images.unsplash.com/photo-1769184615259-e609796f63e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGFwZWwlMjB3aW5kb3clMjBsaWdodCUyMGJlYW0lMjByYXlzfGVufDF8fHx8MTc3MzIyNTE2MXww&ixlib=rb-4.1.0&q=80&w=1080"
+            image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg"
         },
         {
             id: 3,
             title: "예람유치원",
             description: "하나님의 사랑 안에서 아이들의 꿈과 지혜가 쑥쑥 자라나는 믿음의 첫 교육 터전입니다.",
-            image: "https://images.unsplash.com/photo-1567746512136-f005499a7575?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxraW5kZXJnYXJ0ZW4lMjBjbGFzc3Jvb20lMjBlbXB0eSUyMGNvbG9yZnVsfGVufDF8fHx8MTc3MzIyNTE2NXww&ixlib=rb-4.1.0&q=80&w=1080"
+            image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg"
         },
         {
             id: 4,
             title: "예람수양관",
             description: "도심을 벗어나 주님의 품 안에서 영혼의 안식과 깊은 영성을 회복하는 아름다운 쉼터입니다.",
-            image: "https://images.unsplash.com/photo-1771849316619-56a52f7a6f88?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZXRyZWF0JTIwY2VudGVyJTIwbW91bnRhaW4lMjBjYWJpbiUyMG5hdHVyZXxlbnwxfHx8fDE3NzMyMjUxNjV8MA&ixlib=rb-4.1.0&q=80&w=1080"
+            image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg"
         },
         {
             id: 5,
             title: "한국기독교\n선교박물관",
             description: "한국 기독교 선교의 소중한 발자취와 신앙의 유산을 한눈에 돌아보는 역사의 현장입니다.",
-            image: "https://images.unsplash.com/photo-1770819372115-dafe72a8c8b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtdXNldW0lMjBnYWxsZXJ5JTIwZXhoaWJpdGlvbiUyMGVtcHR5JTIwaGFsbHxlbnwxfHx8fDE3NzMyMjUxNjV8MA&ixlib=rb-4.1.0&q=80&w=1080"
+            image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg"
         }
     ];
 
@@ -901,49 +732,7 @@ function initCommunityCards() {
         `;
     });
 
-    container.innerHTML = `
-        <section class="cc-section">
-            <div class="cc-container" id="cc-container">
-                <div class="cc-left">
-                    <span class="cc-label">Ministry</span>
 
-                    <!-- Mobile Header -->
-                    <div class="cc-mobile-header">
-                        <h2 class="cc-title" style="margin-bottom:0;">공동체</h2>
-                        <div class="cc-mobile-controls">
-                            <div class="cc-counter">
-                                <span class="cc-counter-current" id="cc-current-m"></span>
-                                <span class="cc-counter-total" id="cc-total-m"></span>
-                            </div>
-                            <div class="cc-nav-btns">
-                                <button class="cc-nav-btn cc-prev-btn">${svgChevronLeft}</button>
-                                <button class="cc-nav-btn cc-next-btn">${svgChevronRight}</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Desktop Header -->
-                    <div class="cc-desktop-header">
-                        <h2 class="cc-title">공동체<br></h2>
-                        <div class="cc-counter" style="margin-bottom: 1.25rem;">
-                            <span class="cc-counter-current" id="cc-current-d"></span>
-                            <span class="cc-counter-total" id="cc-total-d"></span>
-                        </div>
-                        <div class="cc-nav-btns">
-                            <button class="cc-nav-btn cc-prev-btn">${svgChevronLeft}</button>
-                            <button class="cc-nav-btn cc-next-btn">${svgChevronRight}</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cc-right" id="cc-right">
-                    <div class="cc-track" id="cc-track">
-                        ${trackHtml}
-                    </div>
-                </div>
-            </div>
-        </section>
-    `;
 
     const track = document.getElementById('cc-track');
     const containerEl = document.getElementById('cc-container');
@@ -1068,64 +857,28 @@ function initTabbedGallery() {
 
     const galleries = {
         event: [
-            { image: "https://images.unsplash.com/photo-1548625361-ec8580228d44?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2Z0JTIwYmx1ZSUyMGdyYWRpZW50JTIwYmFja2dyb3VuZHxlbnwxfHx8fDE3NzMyMzc0NjR8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "2023 가을 부흥회", date: "2023년 10월 15일" },
-            { image: "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmFkaWVudCUyMGJsdWUlMjBwaW5rJTIwc21vb3RofGVufDF8fHx8MTc3MzIzNzQ2NXww&ixlib=rb-4.1.0&q=80&w=1080", caption: "여름 성경 학교", date: "2023년 8월 5일" },
-            { image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGxpZ3h0JTIwYmx1ZSUyMHRleHR1cmV8ZW58MXx8fHwxNzczMjM3NDY1fDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "성탄절 칸타타", date: "2023년 12월 24일" },
-            { image: "https://images.unsplash.com/photo-1557682250-33bd709cbe85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwdXJwbGUlMjBwaW5rJTIwYmx1ZSUyMGdyYWRpZW50fGVufDF8fHx8MTc3MzIzNzQ2Nnww&ixlib=rb-4.1.0&q=80&w=1080", caption: "청년부 단기선교", date: "2023년 7월 20일" },
-            { image: "https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHwzZCUyMHJlbmRlciUyMGFic3RyYWN0JTIwYmx1ZXxlbnwxfHx8fDE3NzMyMzc0NjZ8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "추수감사절 예배", date: "2023년 11월 19일" },
-            { image: "https://images.unsplash.com/photo-1612457506498-e394426f27cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwYXN0ZWwlMjBibHVlJTI0bW91bnRhaW4lMjBmb2clMjBtaXN0eXxlbnwxfHx8fDE3NzMyMzc0Njd8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "소그룹 성경 공부", date: "2023년 7월 15일" }
+            { image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg", caption: "2023 가을 부흥회", date: "2023년 10월 15일" },
+            { image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg", caption: "여름 성경 학교", date: "2023년 8월 5일" },
+            { image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg", caption: "성탄절 칸타타", date: "2023년 12월 24일" },
+            { image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg", caption: "청년부 단기선교", date: "2023년 7월 20일" },
+            { image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg", caption: "추수감사절 예배", date: "2023년 11월 19일" },
+            { image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg", caption: "소그룹 성경 공부", date: "2023년 7월 15일" }
         ],
         newcomer: [
-            { image: "https://images.unsplash.com/photo-1742403412928-c077668aad2e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2Z0JTIwYmx1ZSUyMG1hcmJsZSUyMHRleHR1cmUlMjBzbW9vdGh8ZW58MXx8fHwxNzczMjM3NDY4fDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "새가족 환영회", date: "2023년 9월 1일" },
-            { image: "https://images.unsplash.com/photo-1628880635807-fa5bf0df26b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpY2UlMjBibHVlJTIwZnJvemVuJTIwY3J5c3RhbCUyMGNsb3NlfGVufDF8fHx8MTc3MzIzNzQ2OHww&ixlib=rb-4.1.0&q=80&w=1080", caption: "어린이 프로그램", date: "2023년 10월 1일" },
-            { image: "https://images.unsplash.com/photo-1649711115004-4c5215684b08?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwYWxlJTIwYmx1ZSUyMGdyYWRpZW50JTIwd2FsbCUyMHBhaW50fGVufDF8fHx8MTc3MzIzNzQ2OHww&ixlib=rb-4.1.0&q=80&w=1080", caption: "봉사팀 오리엔테이션", date: "2023년 8월 1일" },
-            { image: "https://images.unsplash.com/photo-1641651495195-f1d8b6f63121?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2Z0JTIwYmx1ZSUyMGZlYXRoZXIlMjBkZWxpY2F0ZSUyMHBhc3RlbHxlbnwxfHx8fDE3NzMyMzc0Njl8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "교회 투어", date: "2023년 11월 1일" },
-            { image: "https://images.unsplash.com/photo-1544032735-4ed3ae9685e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxibHVlJTIwcGFzdGVsJTIwZGF3biUyMGhvcml6b24lMjBtaW5pbWFsfGVufDF8fHx8MTc3MzIzNzQ2OXww&ixlib=rb-4.1.0&q=80&w=1080", caption: "중보기도", date: "2023년 12월 1일" },
-            { image: "https://images.unsplash.com/photo-1741663888387-d7510d1253b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsaWdodCUyMGJsdWUlMjBzaWxrJTIwZmFicmljJTIwZmxvd2luZ3xlbnwxfHx8fDE3NzMyMzc0NzB8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "예배 안내", date: "2023년 1월 1일" }
+            { image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg", caption: "새가족 환영회", date: "2023년 9월 1일" },
+            { image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg", caption: "어린이 프로그램", date: "2023년 10월 1일" },
+            { image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg", caption: "봉사팀 오리엔테이션", date: "2023년 8월 1일" },
+            { image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg", caption: "교회 투어", date: "2023년 11월 1일" },
+            { image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg", caption: "중보기도", date: "2023년 12월 1일" },
+            { image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg", caption: "예배 안내", date: "2023년 1월 1일" }
         ]
     };
 
-    const bgUrl = "https://images.unsplash.com/photo-1522123472015-2d9f7ee5608d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdW5saWdodCUyMGNhc3RpbmclMjBzaGFkb3dzJTIwY29uY3JldGUlMjB3YWxsJTIwbWluaW1hbHxlbnwxfHx8fDE3NzMyMzY0MzR8MA&ixlib=rb-4.1.0&q=80&w=1080";
+    const bgUrl = "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg";
     const svgChevronLeft = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cc-nav-icon"><path d="m15 18-6-6 6-6"/></svg>`;
     const svgChevronRight = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cc-nav-icon"><path d="m9 18 6-6-6-6"/></svg>`;
 
-    container.innerHTML = `
-        <section class="tg-section">
-            <div class="tg-bg">
-                <img src="${bgUrl}" alt="" class="tg-bg-img">
-                <div class="tg-bg-overlay"></div>
-            </div>
 
-            <div class="tg-content">
-                <div class="tg-header-row">
-                    <div>
-                        <span class="tg-label">Gallery</span>
-                        <div class="tg-title-wrap">
-                            <h2 class="tg-title">동래중앙 앨범</h2>
-                            <div class="tg-tabs">
-                                <button class="tg-tab-btn active" data-tab="event">행사 앨범</button>
-                                <button class="tg-tab-btn" data-tab="newcomer">새가족 앨범</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="tg-nav-wrap">
-                        <div class="tg-progress-bar">
-                            <div class="tg-progress-fill" id="tg-progress-fill"></div>
-                        </div>
-                        <button class="tg-nav-btn" id="tg-prev-btn" disabled>${svgChevronLeft}</button>
-                        <button class="tg-nav-btn" id="tg-next-btn">${svgChevronRight}</button>
-                    </div>
-                </div>
-
-                <div class="tg-track-wrap">
-                    <div class="tg-track" id="tg-track">
-                        <!-- Cards injected here -->
-                    </div>
-                </div>
-            </div>
-        </section>
-    `;
 
     const track = document.getElementById('tg-track');
     const prevBtn = document.getElementById('tg-prev-btn');
@@ -1244,41 +997,7 @@ function initFooter() {
     const container = document.getElementById('footer-container');
     if (!container) return;
 
-    container.innerHTML = `
-        <footer class="ft-wrapper">
-            <div class="ft-container">
-                <div class="ft-row">
-                    <div class="ft-left">
-                        <div class="ft-logo-wrap">
-                            <div class="ft-logo-box">
-                                <span class="ft-logo-text">동래</span>
-                            </div>
-                            <div>
-                                <span class="ft-title">동래중앙교회</span>
-                            </div>
-                        </div>
-
-                        <div class="ft-info">
-                            <span class="ft-info-line">
-                                <span class="ft-info-label">ADDRESS.</span> 부산광역시 동래구 충렬대로202번가길 24 (수안동, 2-3번지)
-                            </span>
-                            <span class="ft-info-line">
-                                <span class="ft-info-label">TEL.</span> 051-558-1191
-                                <span class="ft-info-divider">|</span>
-                                <span class="ft-info-label">FAX.</span> 051-555-8474
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="ft-right">
-                        <span class="ft-copyright">Copyright &copy; 2026 동래중앙교회</span>
-                        <span class="ft-credit">All rights reserved. Designed by (주)스데반정보</span>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    `;
-}
+    }
 
 document.addEventListener("DOMContentLoaded", () => {
     // Other inits...

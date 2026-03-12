@@ -1,7 +1,5 @@
 /* Global CSS Setup */
-html {
-    font-size: 1.125rem;
-}
+html { font-size: 18px; }
 
 /* Base resets & styles */
 *, *::before, *::after {

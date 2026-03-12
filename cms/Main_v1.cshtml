@@ -1,20 +1,1629 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>동래중앙교회</title>
-    <!-- External fonts for development/fallback -->
-    <!--
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   동래중앙교회
+  </title>
+  <!-- External fonts for development/fallback -->
+  <!--
     <link href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
     -->
-    <link rel="stylesheet" href="Main_v1.css">
-</head>
-<body>
-    <div class="cms-content-root">
-        <!-- Content will be injected here -->
+  <link href="Main_v1.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <div class="cms-content-root">
+   <div class="app-wrapper">
+    <!-- HeroSlider will go here -->
+    <div id="hero-slider-container">
+     <section class="hero-slider">
+      <div id="hero-slides-wrapper">
+       <!-- Slides will be injected here -->
+       <div class="hero-slide active">
+        <div class="hero-slide-bg" style="background-image: url('/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg');">
+        </div>
+       </div>
+      </div>
+      <!-- CI Symbol -->
+      <div class="hero-ci-symbol">
+       <div class="hero-ci-logo-wrap">
+        <div class="hero-ci-logo-box">
+         <span class="hero-ci-logo-text">
+          GCC
+         </span>
+        </div>
+        <span class="hero-ci-church-name">
+         Grace Community Church
+        </span>
+       </div>
+       <nav class="hero-nav">
+        <a class="hero-nav-item" href="#">
+         교회소개
+        </a>
+        <a class="hero-nav-item" href="#">
+         예배안내
+        </a>
+        <a class="hero-nav-item" href="#">
+         말씀
+        </a>
+        <a class="hero-nav-item" href="#">
+         커뮤니티
+        </a>
+        <a class="hero-nav-item" href="#">
+         오시는 길
+        </a>
+        <button aria-label="메뉴" class="hero-menu-btn" id="hero-menu-open-btn">
+         <span class="hero-menu-btn-bar">
+         </span>
+         <span class="hero-menu-btn-bar">
+         </span>
+         <span class="hero-menu-btn-bar">
+         </span>
+        </button>
+       </nav>
+      </div>
+      <!-- Mega Menu Placeholder -->
+      <div id="mega-menu-container">
+       <div class="mega-menu-overlay" id="mega-menu-overlay">
+        <div class="mega-menu-header">
+         <div class="hero-ci-logo-wrap">
+          <div class="mega-menu-ci-box">
+           <span class="mega-menu-ci-text">
+            GCC
+           </span>
+          </div>
+          <span class="mega-menu-church-name">
+           Grace Community Church
+          </span>
+         </div>
+         <button aria-label="닫기" class="mega-menu-close-btn" id="mega-menu-close-btn">
+          <svg fill="none" height="28" viewbox="0 0 28 28" width="28">
+           <path d="M6 6L22 22" stroke="currentColor" stroke-linecap="round" stroke-width="1.5">
+           </path>
+           <path d="M22 6L6 22" stroke="currentColor" stroke-linecap="round" stroke-width="1.5">
+           </path>
+          </svg>
+         </button>
+        </div>
+        <div class="mega-menu-grid-wrap">
+         <div class="mega-menu-grid">
+          <div class="mega-menu-category" style="transition-delay: 0.1s;">
+           <h3 class="mega-menu-cat-title">
+            교회소개
+           </h3>
+           <ul class="mega-menu-list">
+            <li>
+             <a class="mega-menu-link" href="#">
+              인사말
+             </a>
+            </li>
+            <li>
+             <button class="mega-menu-sub-btn">
+              <span>
+               섬기는 사람들
+              </span>
+              <svg class="mega-menu-sub-icon" fill="none" height="14" viewbox="0 0 14 14" width="14">
+               <path d="M3 5.5L7 9.5L11 5.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2">
+               </path>
+              </svg>
+             </button>
+             <ul class="mega-menu-sub-list">
+              <li>
+               <a class="mega-menu-sub-link" href="#">
+                교역자
+               </a>
+              </li>
+              <li>
+               <a class="mega-menu-sub-link" href="#">
+                장로
+               </a>
+              </li>
+              <li>
+               <a class="mega-menu-sub-link" href="#">
+                교회직원
+               </a>
+              </li>
+             </ul>
+            </li>
+            <li>
+             <a class="mega-menu-link" href="#">
+              예배시간 안내
+             </a>
+            </li>
+            <li>
+             <a class="mega-menu-link" href="#">
+              새가족 안내
+             </a>
+            </li>
+            <li>
+             <a class="mega-menu-link" href="#">
+              CI 심볼
+             </a>
+            </li>
+            <li>
+             <a class="mega-menu-link" href="#">
+              오시는 길
+             </a>
+            </li>
+           </ul>
+          </div>
+          <div class="mega-menu-category" style="transition-delay: 0.14s;">
+           <h3 class="mega-menu-cat-title">
+            말씀
+           </h3>
+           <ul class="mega-menu-list">
+            <li>
+             <a class="mega-menu-link" href="#">
+              주일 낮 예배
+             </a>
+            </li>
+            <li>
+             <a class="mega-menu-link" href="#">
+              주일 찬양 예배
+             </a>
+            </li>
+            <li>
+             <a class="mega-menu-link" href="#">
+              수요말씀사경회
+             </a>
+            </li>
+            <li>
+             <a class="mega-menu-link" href="#">
+              금요성령기도회
+             </a>
+            </li>
+            <li>
+             <a class="mega-menu-link" href="#">
+              특별행사
+             </a>
+            </li>
+           </ul>
+          </div>
+          <div class="mega-menu-category" style="transition-delay: 0.18s;">
+           <h3 class="mega-menu-cat-title">
+            찬양
+           </h3>
+           <ul class="mega-menu-list">
+            <li>
+             <a class="mega-menu-link" href="#">
+              시온찬양대
+             </a>
+            </li>
+            <li>
+             <a class="mega-menu-link" href="#">
+              노엘찬양대
+             </a>
+            </li>
+            <li>
+             <a class="mega-menu-link" href="#">
+              임마누엘찬양대
+             </a>
+            </li>
+            <li>
+             <a class="mega-menu-link" href="#">
+              호산나찬양대
+             </a>
+            </li>
+            <li>
+             <a class="mega-menu-link" href="#">
+              찬양단
+             </a>
+            </li>
+            <li>
+             <a class="mega-menu-link" href="#">
+              봉헌송 및 특별찬양
+             </a>
+            </li>
+           </ul>
+          </div>
+          <div class="mega-menu-category" style="transition-delay: 0.22s;">
+           <h3 class="mega-menu-cat-title">
+            다음세대
+           </h3>
+           <ul class="mega-menu-list">
+            <li>
+             <a class="mega-menu-link" href="#">
+              영유아부
+             </a>
+            </li>
+            <li>
+             <a class="mega-menu-link" href="#">
+              유치부
+             </a>
+            </li>
+            <li>
+             <a class="mega-menu-link" href="#">
+              유년부
+             </a>
+            </li>
+            <li>
+             <a class="mega-menu-link" href="#">
+              소년부
+             </a>
+            </li>
+            <li>
+             <a class="mega-menu-link" href="#">
+              중등부
+             </a>
+            </li>
+            <li>
+             <a class="mega-menu-link" href="#">
+              고등부
+             </a>
+            </li>
+            <li>
+             <a class="mega-menu-link" href="#">
+              청년부
+             </a>
+            </li>
+           </ul>
+          </div>
+          <div class="mega-menu-category" style="transition-delay: 0.26s;">
+           <h3 class="mega-menu-cat-title">
+            공동체 (기관)
+           </h3>
+           <ul class="mega-menu-list">
+            <li>
+             <a class="mega-menu-link" href="#">
+              은장회 / 안수집사회 / 남선교회
+             </a>
+            </li>
+            <li>
+             <a class="mega-menu-link" href="#">
+              부디아곱사회 / 여선교회
+             </a>
+            </li>
+            <li>
+             <a class="mega-menu-link" href="#">
+              예람유치원
+             </a>
+            </li>
+            <li>
+             <a class="mega-menu-link" href="#">
+              예람수양관
+             </a>
+            </li>
+            <li>
+             <a class="mega-menu-link" href="#">
+              한국기독교선교박물관
+             </a>
+            </li>
+           </ul>
+          </div>
+          <div class="mega-menu-category" style="transition-delay: 0.30000000000000004s;">
+           <h3 class="mega-menu-cat-title">
+            팀사역
+           </h3>
+           <ul class="mega-menu-list">
+            <li>
+             <a class="mega-menu-link" href="#">
+              국내선교
+             </a>
+            </li>
+            <li>
+             <a class="mega-menu-link" href="#">
+              해외선교
+             </a>
+            </li>
+            <li>
+             <button class="mega-menu-sub-btn">
+              <span>
+               문화사역
+              </span>
+              <svg class="mega-menu-sub-icon" fill="none" height="14" viewbox="0 0 14 14" width="14">
+               <path d="M3 5.5L7 9.5L11 5.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2">
+               </path>
+              </svg>
+             </button>
+             <ul class="mega-menu-sub-list">
+              <li>
+               <a class="mega-menu-sub-link" href="#">
+                아기학교
+               </a>
+              </li>
+              <li>
+               <a class="mega-menu-sub-link" href="#">
+                탈무드창의영재학교
+               </a>
+              </li>
+              <li>
+               <a class="mega-menu-sub-link" href="#">
+                토요음악교실
+               </a>
+              </li>
+              <li>
+               <a class="mega-menu-sub-link" href="#">
+                A.I스쿨
+               </a>
+              </li>
+             </ul>
+            </li>
+            <li>
+             <a class="mega-menu-link" href="#">
+              예람전도대
+             </a>
+            </li>
+            <li>
+             <a class="mega-menu-link" href="#">
+              새가족 양육
+             </a>
+            </li>
+            <li>
+             <a class="mega-menu-link" href="#">
+              중보기도대
+             </a>
+            </li>
+            <li>
+             <a class="mega-menu-link" href="#">
+              늘푸른대학
+             </a>
+            </li>
+            <li>
+             <a class="mega-menu-link" href="#">
+              사회봉사
+             </a>
+            </li>
+           </ul>
+          </div>
+          <div class="mega-menu-category" style="transition-delay: 0.33999999999999997s;">
+           <h3 class="mega-menu-cat-title">
+            온라인행정
+           </h3>
+           <ul class="mega-menu-list">
+            <li>
+             <a class="mega-menu-link" href="#">
+              차량예약
+             </a>
+            </li>
+            <li>
+             <a class="mega-menu-link" href="#">
+              장소예약
+             </a>
+            </li>
+            <li>
+             <a class="mega-menu-link" href="#">
+              비품수리신청
+             </a>
+            </li>
+            <li>
+             <a class="mega-menu-link" href="#">
+              증명서 발급
+             </a>
+            </li>
+           </ul>
+          </div>
+          <div class="mega-menu-category" style="transition-delay: 0.38s;">
+           <h3 class="mega-menu-cat-title">
+            나눔터
+           </h3>
+           <ul class="mega-menu-list">
+            <li>
+             <a class="mega-menu-link" href="#">
+              공지사항
+             </a>
+            </li>
+            <li>
+             <a class="mega-menu-link" href="#">
+              주보
+             </a>
+            </li>
+            <li>
+             <a class="mega-menu-link" href="#">
+              행사앨범
+             </a>
+            </li>
+            <li>
+             <a class="mega-menu-link" href="#">
+              새가족앨범
+             </a>
+            </li>
+            <li>
+             <a class="mega-menu-link" href="#">
+              방송자막요청
+             </a>
+            </li>
+            <li>
+             <a class="mega-menu-link" href="#">
+              선교지소식
+             </a>
+            </li>
+            <li>
+             <a class="mega-menu-link" href="#">
+              교무사업체
+             </a>
+            </li>
+           </ul>
+          </div>
+         </div>
+        </div>
+        <div class="mega-menu-footer">
+         <div class="mega-menu-footer-inner">
+          <span class="mega-menu-footer-text">
+           &copy; 2026 동래중앙교회
+          </span>
+          <span class="mega-menu-footer-text">
+           Tel. 051-555-1234
+          </span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <!-- Pagination -->
+      <div class="hero-pagination">
+       <button class="hero-page-btn" id="hero-prev-btn">
+        <svg fill="none" height="16" viewbox="0 0 16 16" width="16">
+         <path d="M10 3L5 8L10 13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+         </path>
+        </svg>
+       </button>
+       <div class="hero-page-indicator">
+        <span class="hero-page-current" id="hero-current-text">
+         01
+        </span>
+        <span class="hero-page-divider">
+         /
+        </span>
+        <span class="hero-page-total" id="hero-total-text">
+         02
+        </span>
+       </div>
+       <button class="hero-page-btn" id="hero-next-btn">
+        <svg fill="none" height="16" viewbox="0 0 16 16" width="16">
+         <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+         </path>
+        </svg>
+       </button>
+      </div>
+     </section>
     </div>
-    <script src="Main_v1.js"></script>
-</body>
+    <!-- InteractiveGrid will go here -->
+    <div class="scroll-fade-up" id="interactive-grid-container">
+     <section class="igrid-section">
+      <div class="igrid-container">
+       <!-- Welcome Card -->
+       <div class="igrid-card welcome">
+        <div class="igrid-bg" style="background-image: url('/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg');">
+        </div>
+        <div class="igrid-overlay">
+        </div>
+        <div class="igrid-content">
+         <p class="igrid-label">
+          Welcome
+         </p>
+         <h3 class="igrid-title">
+          처음오셨나요?
+         </h3>
+         <div class="igrid-desc-wrap">
+          <p class="igrid-desc">
+           동래중앙교회에 오신것을 환영합니다.
+           <br/>
+           온 열방을 향하여 복음을 힘써 전하는 건강한 교회,
+           <br/>
+           동래중앙교회입니다.
+          </p>
+         </div>
+         <div class="igrid-links-wrap">
+          <button class="igrid-link-btn">
+           <div class="igrid-icon-box">
+            <svg class="igrid-icon" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+             <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2">
+             </path>
+             <circle cx="9" cy="7" r="4">
+             </circle>
+             <line x1="19" x2="19" y1="8" y2="14">
+             </line>
+             <line x1="22" x2="16" y1="11" y2="11">
+             </line>
+            </svg>
+           </div>
+           <span class="igrid-link-text">
+            새가족 안내
+            <span class="igrid-link-underline">
+            </span>
+           </span>
+          </button>
+          <button class="igrid-link-btn">
+           <div class="igrid-icon-box">
+            <svg class="igrid-icon" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+             <circle cx="12" cy="12" r="10">
+             </circle>
+             <polyline points="12 6 12 12 16 14">
+             </polyline>
+            </svg>
+           </div>
+           <span class="igrid-link-text">
+            예배시간 안내
+            <span class="igrid-link-underline">
+            </span>
+           </span>
+          </button>
+          <button class="igrid-link-btn">
+           <div class="igrid-icon-box">
+            <svg class="igrid-icon" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+             <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+             </path>
+             <circle cx="12" cy="10" r="3">
+             </circle>
+            </svg>
+           </div>
+           <span class="igrid-link-text">
+            오시는 길
+            <span class="igrid-link-underline">
+            </span>
+           </span>
+          </button>
+         </div>
+        </div>
+       </div>
+       <!-- Notice Card -->
+       <div class="igrid-card notice">
+        <div class="igrid-bg" style="background-image: url('/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg');">
+        </div>
+        <div class="igrid-overlay">
+        </div>
+        <div class="igrid-content">
+         <p class="igrid-label">
+          Notice
+         </p>
+         <h3 class="igrid-title">
+          성도를 위한 안내
+         </h3>
+         <div class="igrid-desc-wrap">
+          <p class="igrid-desc">
+           교회의 주요 공지사항 및
+           <br/>
+           예배를 위한 주보를 편하게 확인해보시기 바랍니다.
+          </p>
+         </div>
+         <div class="igrid-links-wrap">
+          <button class="igrid-link-btn">
+           <div class="igrid-icon-box">
+            <svg class="igrid-icon" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+             <path d="m3 11 18-5v12L3 14v-3z">
+             </path>
+             <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6">
+             </path>
+            </svg>
+           </div>
+           <span class="igrid-link-text">
+            공지사항
+            <span class="igrid-link-underline">
+            </span>
+           </span>
+          </button>
+          <button class="igrid-link-btn">
+           <div class="igrid-icon-box">
+            <svg class="igrid-icon" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+             <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2">
+             </path>
+             <path d="M18 14h-8">
+             </path>
+             <path d="M15 18h-5">
+             </path>
+             <path d="M10 6h8v4h-8V6Z">
+             </path>
+            </svg>
+           </div>
+           <span class="igrid-link-text">
+            주보
+            <span class="igrid-link-underline">
+            </span>
+           </span>
+          </button>
+          <button class="igrid-link-btn">
+           <div class="igrid-icon-box">
+            <svg class="igrid-icon" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+             <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z">
+             </path>
+             <path d="M14 2v4a2 2 0 0 0 2 2h4">
+             </path>
+             <path d="M10 9H8">
+             </path>
+             <path d="M16 13H8">
+             </path>
+             <path d="M16 17H8">
+             </path>
+            </svg>
+           </div>
+           <span class="igrid-link-text">
+            방송자막요청
+            <span class="igrid-link-underline">
+            </span>
+           </span>
+          </button>
+         </div>
+        </div>
+       </div>
+      </div>
+     </section>
+    </div>
+    <!-- StickyHorizontalScroll will go here -->
+    <div class="scroll-fade-up" id="sticky-horizontal-scroll-container">
+     <section class="shs-section" id="shs-section">
+      <div class="shs-sticky-wrap" id="shs-sticky-wrap" style="background-color: rgb(255, 255, 255); --shs-title-color: rgb(26, 39, 68); --shs-subtitle-color: rgba(26, 39, 68, 0.7); --shs-meta-color: rgba(26, 39, 68, 0.6); --shs-accent-color: rgb(43, 93, 140); --shs-arrow-bg: rgb(26,39,68);">
+       <div class="shs-header">
+        <span class="shs-label" style="color: var(--shs-accent-color)">
+         Weekly Schedule
+        </span>
+        <h2 class="shs-title" style="color: var(--shs-title-color)">
+         예배와 모임
+        </h2>
+       </div>
+       <div class="shs-scroll-wrap" id="shs-scroll-wrap" style="gap: 48px; padding-left: 64px; transform: translateX(0px);">
+        <div class="shs-card" style="width: 600px;">
+         <div class="shs-thumb-box">
+          <img alt="주일 낮예배" class="shs-thumb-img" src="/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg"/>
+         </div>
+         <div class="shs-card-content">
+          <p class="shs-card-title" style="color: var(--shs-subtitle-color)">
+           주일 낮예배
+          </p>
+          <h3 class="shs-card-sermon" style="color: var(--shs-title-color)">
+           예수께서 머물고 부르시는 그 곳에
+          </h3>
+          <p class="shs-card-verse" style="color: var(--shs-meta-color)">
+           마가복음10장46-52절
+          </p>
+          <p class="shs-card-meta" style="color: var(--shs-meta-color)">
+           정대훈 목사 | 2026.03.08
+          </p>
+          <div class="shs-arrow-btn" style="background-color: var(--shs-arrow-bg)">
+           <svg class="shs-arrow-icon" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 12h14">
+            </path>
+            <path d="m12 5 7 7-7 7">
+            </path>
+           </svg>
+          </div>
+         </div>
+        </div>
+        <div class="shs-card" style="width: 600px;">
+         <div class="shs-thumb-box">
+          <img alt="주일 찬양 예배" class="shs-thumb-img" src="/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg"/>
+         </div>
+         <div class="shs-card-content">
+          <p class="shs-card-title" style="color: var(--shs-subtitle-color)">
+           주일 찬양 예배
+          </p>
+          <h3 class="shs-card-sermon" style="color: var(--shs-title-color)">
+           익숙함의 늪을 떠나
+          </h3>
+          <p class="shs-card-verse" style="color: var(--shs-meta-color)">
+           누가복음 9장57-62절
+          </p>
+          <p class="shs-card-meta" style="color: var(--shs-meta-color)">
+           강신영 목사 | 2026.03.08
+          </p>
+          <div class="shs-arrow-btn" style="background-color: var(--shs-arrow-bg)">
+           <svg class="shs-arrow-icon" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 12h14">
+            </path>
+            <path d="m12 5 7 7-7 7">
+            </path>
+           </svg>
+          </div>
+         </div>
+        </div>
+        <div class="shs-card" style="width: 600px;">
+         <div class="shs-thumb-box">
+          <img alt="수요말씀사경회" class="shs-thumb-img" src="/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg"/>
+         </div>
+         <div class="shs-card-content">
+          <p class="shs-card-title" style="color: var(--shs-subtitle-color)">
+           수요말씀사경회
+          </p>
+          <h3 class="shs-card-sermon" style="color: var(--shs-title-color)">
+           우리가 남이가
+          </h3>
+          <p class="shs-card-verse" style="color: var(--shs-meta-color)">
+           에베소서 2장11-22절
+          </p>
+          <p class="shs-card-meta" style="color: var(--shs-meta-color)">
+           박세영 목사 | 2026.03.04
+          </p>
+          <div class="shs-arrow-btn" style="background-color: var(--shs-arrow-bg)">
+           <svg class="shs-arrow-icon" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 12h14">
+            </path>
+            <path d="m12 5 7 7-7 7">
+            </path>
+           </svg>
+          </div>
+         </div>
+        </div>
+        <div class="shs-card" style="width: 600px;">
+         <div class="shs-thumb-box">
+          <img alt="금요성령기도회" class="shs-thumb-img" src="/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg"/>
+         </div>
+         <div class="shs-card-content">
+          <p class="shs-card-title" style="color: var(--shs-subtitle-color)">
+           금요성령기도회
+          </p>
+          <h3 class="shs-card-sermon" style="color: var(--shs-title-color)">
+           금요성령기도회 입니다.
+          </h3>
+          <p class="shs-card-meta" style="color: var(--shs-meta-color)">
+           ooo 목사 | 2026.03.13
+          </p>
+          <div class="shs-arrow-btn" style="background-color: var(--shs-arrow-bg)">
+           <svg class="shs-arrow-icon" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 12h14">
+            </path>
+            <path d="m12 5 7 7-7 7">
+            </path>
+           </svg>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </section>
+    </div>
+    <!-- DynamicToggle will go here -->
+    <div class="scroll-fade-up" id="dynamic-toggle-container">
+     <section class="dt-section" id="dt-section" style="height: 520vh;">
+      <div class="dt-sticky-wrap">
+       <div class="dt-content">
+        <div class="dt-header">
+         <span class="dt-label">
+          Ministry
+         </span>
+         <h2 class="dt-title">
+          사역과 프로그램
+         </h2>
+        </div>
+        <div class="dt-stack-container" id="dt-stack-container" style="height: 520px;">
+         <div class="dt-card" id="dt-card-0" style="z-index: 1; height: 520px; transform: translateY(0px) scale(1); opacity: 1; transition: transform 0.1s cubic-bezier(0.25, 0.1, 0.25, 1), opacity 0.1s cubic-bezier(0.25, 0.1, 0.25, 1);">
+          <div class="dt-card-inner">
+           <div class="dt-img-wrap">
+            <img alt="다음세대" class="dt-img" src="/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg"/>
+            <div class="dt-img-overlay">
+            </div>
+           </div>
+           <div class="dt-info">
+            <span class="dt-info-subtitle">
+             Next Generation
+            </span>
+            <h3 class="dt-info-title">
+             다음세대
+            </h3>
+            <p class="dt-info-desc">
+             미래의 주역인 영유아부터 청년까지, 하나님의 말씀 안에서 꿈을 키우고 건강하게 성장하는 신앙 교육 공동체입니다.
+            </p>
+            <div class="dt-links">
+             <button class="dt-link-btn">
+              영유아부
+             </button>
+             <button class="dt-link-btn">
+              유치부
+             </button>
+             <button class="dt-link-btn">
+              유년부
+             </button>
+             <button class="dt-link-btn">
+              소년부
+             </button>
+             <button class="dt-link-btn">
+              중등부
+             </button>
+             <button class="dt-link-btn">
+              고등부
+             </button>
+             <button class="dt-link-btn">
+              청년부
+             </button>
+            </div>
+            <div class="dt-more-wrap">
+             <button class="dt-more-btn">
+              <span class="dt-more-text">
+               VIEW MORE
+              </span>
+              <svg class="dt-more-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+               <path d="M5 12h14">
+               </path>
+               <path d="m12 5 7 7-7 7">
+               </path>
+              </svg>
+             </button>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="dt-card" id="dt-card-1" style="z-index: 2; height: 520px; transform: translateY(600px) scale(1); opacity: 0; transition: transform 0.1s cubic-bezier(0.25, 0.1, 0.25, 1), opacity 0.1s cubic-bezier(0.25, 0.1, 0.25, 1);">
+          <div class="dt-card-inner">
+           <div class="dt-img-wrap">
+            <img alt="팀사역" class="dt-img" src="/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg"/>
+            <div class="dt-img-overlay">
+            </div>
+           </div>
+           <div class="dt-info">
+            <span class="dt-info-subtitle">
+             Ministry
+            </span>
+            <h3 class="dt-info-title">
+             팀사역
+            </h3>
+            <p class="dt-info-desc">
+             국내외 선교, 문화 사역, 교육 및 봉사 등 각자의 은사에 맞춰 하나님의 사랑을 실천하고 세상을 섬기는 전문 사역 팀들의 모임입니다.
+            </p>
+            <div class="dt-links">
+             <button class="dt-link-btn">
+              국내선교
+             </button>
+             <button class="dt-link-btn">
+              해외선교
+             </button>
+             <button class="dt-link-btn">
+              문화사역
+             </button>
+             <button class="dt-link-btn">
+              예람전도대
+             </button>
+             <button class="dt-link-btn">
+              새가족 양육
+             </button>
+             <button class="dt-link-btn">
+              중보기도대
+             </button>
+             <button class="dt-link-btn">
+              늘푸른대학
+             </button>
+             <button class="dt-link-btn">
+              사회봉사
+             </button>
+            </div>
+            <div class="dt-more-wrap">
+             <button class="dt-more-btn">
+              <span class="dt-more-text">
+               VIEW MORE
+              </span>
+              <svg class="dt-more-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+               <path d="M5 12h14">
+               </path>
+               <path d="m12 5 7 7-7 7">
+               </path>
+              </svg>
+             </button>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="dt-card" id="dt-card-2" style="z-index: 3; height: 520px; transform: translateY(600px) scale(1); opacity: 0; transition: transform 0.1s cubic-bezier(0.25, 0.1, 0.25, 1), opacity 0.1s cubic-bezier(0.25, 0.1, 0.25, 1);">
+          <div class="dt-card-inner">
+           <div class="dt-img-wrap">
+            <img alt="온라인 행정" class="dt-img" src="/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg"/>
+            <div class="dt-img-overlay">
+            </div>
+           </div>
+           <div class="dt-info">
+            <span class="dt-info-subtitle">
+             Administration
+            </span>
+            <h3 class="dt-info-title">
+             온라인 행정
+            </h3>
+            <p class="dt-info-desc">
+             성도님들의 원활한 교회 활동을 위해 장소 및 차량 예약, 각종 증명서 발급 등을 언제 어디서나 간편하게 처리할 수 있는 지원 서비스입니다.
+            </p>
+            <div class="dt-links">
+             <button class="dt-link-btn">
+              차량예약
+             </button>
+             <button class="dt-link-btn">
+              장소예약
+             </button>
+             <button class="dt-link-btn">
+              비품수리신청
+             </button>
+             <button class="dt-link-btn">
+              증명서 발급
+             </button>
+            </div>
+            <div class="dt-more-wrap">
+             <button class="dt-more-btn">
+              <span class="dt-more-text">
+               VIEW MORE
+              </span>
+              <svg class="dt-more-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+               <path d="M5 12h14">
+               </path>
+               <path d="m12 5 7 7-7 7">
+               </path>
+              </svg>
+             </button>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </section>
+    </div>
+    <!-- CommunityCards will go here -->
+    <div class="scroll-fade-up" id="community-cards-container">
+     <section class="cc-section">
+      <div class="cc-container" id="cc-container" style="padding-right: 0px;">
+       <div class="cc-left">
+        <span class="cc-label">
+         Ministry
+        </span>
+        <!-- Mobile Header -->
+        <div class="cc-mobile-header">
+         <h2 class="cc-title" style="margin-bottom:0;">
+          공동체
+         </h2>
+         <div class="cc-mobile-controls">
+          <div class="cc-counter">
+           <span class="cc-counter-current" id="cc-current-m">
+            01
+           </span>
+           <span class="cc-counter-total" id="cc-total-m">
+            /05
+           </span>
+          </div>
+          <div class="cc-nav-btns">
+           <button class="cc-nav-btn cc-prev-btn">
+            <svg class="cc-nav-icon" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+             <path d="m15 18-6-6 6-6">
+             </path>
+            </svg>
+           </button>
+           <button class="cc-nav-btn cc-next-btn">
+            <svg class="cc-nav-icon" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+             <path d="m9 18 6-6-6-6">
+             </path>
+            </svg>
+           </button>
+          </div>
+         </div>
+        </div>
+        <!-- Desktop Header -->
+        <div class="cc-desktop-header">
+         <h2 class="cc-title">
+          공동체
+          <br/>
+         </h2>
+         <div class="cc-counter" style="margin-bottom: 1.25rem;">
+          <span class="cc-counter-current" id="cc-current-d">
+           01
+          </span>
+          <span class="cc-counter-total" id="cc-total-d">
+           /05
+          </span>
+         </div>
+         <div class="cc-nav-btns">
+          <button class="cc-nav-btn cc-prev-btn">
+           <svg class="cc-nav-icon" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="m15 18-6-6 6-6">
+            </path>
+           </svg>
+          </button>
+          <button class="cc-nav-btn cc-next-btn">
+           <svg class="cc-nav-icon" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="m9 18 6-6-6-6">
+            </path>
+           </svg>
+          </button>
+         </div>
+        </div>
+       </div>
+       <div class="cc-right" id="cc-right" style="height: 440px;">
+        <div class="cc-track" id="cc-track" style="gap: 24px; transform: translateX(-1820px); transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);">
+         <div class="cc-card" id="cc-card-0" style="width: 340px;">
+          <img alt="은장회/안수집사회/
+남선교회" class="cc-card-img" src="/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg"/>
+          <div class="cc-card-overlay">
+          </div>
+          <div class="cc-card-content">
+           <h3 class="cc-card-title">
+            은장회/안수집사회/
+남선교회
+           </h3>
+           <div>
+            <p class="cc-card-desc">
+             기도로 교회를 든든히 세우고 뜨거운 열정으로 헌신하며 본을 보이는 남성 공동체입니다.
+            </p>
+            <div class="cc-card-more">
+             <span class="cc-card-more-text">
+              View More
+             </span>
+             <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12h14">
+              </path>
+              <path d="m12 5 7 7-7 7">
+              </path>
+             </svg>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="cc-card" id="cc-card-1" style="width: 340px;">
+          <img alt="루디아권사회/
+여선교회" class="cc-card-img" src="/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg"/>
+          <div class="cc-card-overlay">
+          </div>
+          <div class="cc-card-content">
+           <h3 class="cc-card-title">
+            루디아권사회/
+여선교회
+           </h3>
+           <div>
+            <p class="cc-card-desc">
+             사랑의 섬김과 간절한 기도로 공동체를 따뜻하게 보듬는 아름다운 여성 공동체입니다.
+            </p>
+            <div class="cc-card-more">
+             <span class="cc-card-more-text">
+              View More
+             </span>
+             <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12h14">
+              </path>
+              <path d="m12 5 7 7-7 7">
+              </path>
+             </svg>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="cc-card" id="cc-card-2" style="width: 340px;">
+          <img alt="예람유치원" class="cc-card-img" src="/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg"/>
+          <div class="cc-card-overlay">
+          </div>
+          <div class="cc-card-content">
+           <h3 class="cc-card-title">
+            예람유치원
+           </h3>
+           <div>
+            <p class="cc-card-desc">
+             하나님의 사랑 안에서 아이들의 꿈과 지혜가 쑥쑥 자라나는 믿음의 첫 교육 터전입니다.
+            </p>
+            <div class="cc-card-more">
+             <span class="cc-card-more-text">
+              View More
+             </span>
+             <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12h14">
+              </path>
+              <path d="m12 5 7 7-7 7">
+              </path>
+             </svg>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="cc-card" id="cc-card-3" style="width: 340px;">
+          <img alt="예람수양관" class="cc-card-img" src="/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg"/>
+          <div class="cc-card-overlay">
+          </div>
+          <div class="cc-card-content">
+           <h3 class="cc-card-title">
+            예람수양관
+           </h3>
+           <div>
+            <p class="cc-card-desc">
+             도심을 벗어나 주님의 품 안에서 영혼의 안식과 깊은 영성을 회복하는 아름다운 쉼터입니다.
+            </p>
+            <div class="cc-card-more">
+             <span class="cc-card-more-text">
+              View More
+             </span>
+             <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12h14">
+              </path>
+              <path d="m12 5 7 7-7 7">
+              </path>
+             </svg>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="cc-card" id="cc-card-4" style="width: 340px;">
+          <img alt="한국기독교
+선교박물관" class="cc-card-img" src="/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg"/>
+          <div class="cc-card-overlay">
+          </div>
+          <div class="cc-card-content">
+           <h3 class="cc-card-title">
+            한국기독교
+선교박물관
+           </h3>
+           <div>
+            <p class="cc-card-desc">
+             한국 기독교 선교의 소중한 발자취와 신앙의 유산을 한눈에 돌아보는 역사의 현장입니다.
+            </p>
+            <div class="cc-card-more">
+             <span class="cc-card-more-text">
+              View More
+             </span>
+             <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12h14">
+              </path>
+              <path d="m12 5 7 7-7 7">
+              </path>
+             </svg>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="cc-card active" id="cc-card-5" style="width: 340px;">
+          <img alt="은장회/안수집사회/
+남선교회" class="cc-card-img" src="/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg"/>
+          <div class="cc-card-overlay">
+          </div>
+          <div class="cc-card-content">
+           <h3 class="cc-card-title">
+            은장회/안수집사회/
+남선교회
+           </h3>
+           <div>
+            <p class="cc-card-desc">
+             기도로 교회를 든든히 세우고 뜨거운 열정으로 헌신하며 본을 보이는 남성 공동체입니다.
+            </p>
+            <div class="cc-card-more">
+             <span class="cc-card-more-text">
+              View More
+             </span>
+             <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12h14">
+              </path>
+              <path d="m12 5 7 7-7 7">
+              </path>
+             </svg>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="cc-card" id="cc-card-6" style="width: 340px;">
+          <img alt="루디아권사회/
+여선교회" class="cc-card-img" src="/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg"/>
+          <div class="cc-card-overlay">
+          </div>
+          <div class="cc-card-content">
+           <h3 class="cc-card-title">
+            루디아권사회/
+여선교회
+           </h3>
+           <div>
+            <p class="cc-card-desc">
+             사랑의 섬김과 간절한 기도로 공동체를 따뜻하게 보듬는 아름다운 여성 공동체입니다.
+            </p>
+            <div class="cc-card-more">
+             <span class="cc-card-more-text">
+              View More
+             </span>
+             <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12h14">
+              </path>
+              <path d="m12 5 7 7-7 7">
+              </path>
+             </svg>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="cc-card" id="cc-card-7" style="width: 340px;">
+          <img alt="예람유치원" class="cc-card-img" src="/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg"/>
+          <div class="cc-card-overlay">
+          </div>
+          <div class="cc-card-content">
+           <h3 class="cc-card-title">
+            예람유치원
+           </h3>
+           <div>
+            <p class="cc-card-desc">
+             하나님의 사랑 안에서 아이들의 꿈과 지혜가 쑥쑥 자라나는 믿음의 첫 교육 터전입니다.
+            </p>
+            <div class="cc-card-more">
+             <span class="cc-card-more-text">
+              View More
+             </span>
+             <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12h14">
+              </path>
+              <path d="m12 5 7 7-7 7">
+              </path>
+             </svg>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="cc-card" id="cc-card-8" style="width: 340px;">
+          <img alt="예람수양관" class="cc-card-img" src="/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg"/>
+          <div class="cc-card-overlay">
+          </div>
+          <div class="cc-card-content">
+           <h3 class="cc-card-title">
+            예람수양관
+           </h3>
+           <div>
+            <p class="cc-card-desc">
+             도심을 벗어나 주님의 품 안에서 영혼의 안식과 깊은 영성을 회복하는 아름다운 쉼터입니다.
+            </p>
+            <div class="cc-card-more">
+             <span class="cc-card-more-text">
+              View More
+             </span>
+             <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12h14">
+              </path>
+              <path d="m12 5 7 7-7 7">
+              </path>
+             </svg>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="cc-card" id="cc-card-9" style="width: 340px;">
+          <img alt="한국기독교
+선교박물관" class="cc-card-img" src="/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg"/>
+          <div class="cc-card-overlay">
+          </div>
+          <div class="cc-card-content">
+           <h3 class="cc-card-title">
+            한국기독교
+선교박물관
+           </h3>
+           <div>
+            <p class="cc-card-desc">
+             한국 기독교 선교의 소중한 발자취와 신앙의 유산을 한눈에 돌아보는 역사의 현장입니다.
+            </p>
+            <div class="cc-card-more">
+             <span class="cc-card-more-text">
+              View More
+             </span>
+             <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12h14">
+              </path>
+              <path d="m12 5 7 7-7 7">
+              </path>
+             </svg>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="cc-card" id="cc-card-10" style="width: 340px;">
+          <img alt="은장회/안수집사회/
+남선교회" class="cc-card-img" src="/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg"/>
+          <div class="cc-card-overlay">
+          </div>
+          <div class="cc-card-content">
+           <h3 class="cc-card-title">
+            은장회/안수집사회/
+남선교회
+           </h3>
+           <div>
+            <p class="cc-card-desc">
+             기도로 교회를 든든히 세우고 뜨거운 열정으로 헌신하며 본을 보이는 남성 공동체입니다.
+            </p>
+            <div class="cc-card-more">
+             <span class="cc-card-more-text">
+              View More
+             </span>
+             <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12h14">
+              </path>
+              <path d="m12 5 7 7-7 7">
+              </path>
+             </svg>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="cc-card" id="cc-card-11" style="width: 340px;">
+          <img alt="루디아권사회/
+여선교회" class="cc-card-img" src="/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg"/>
+          <div class="cc-card-overlay">
+          </div>
+          <div class="cc-card-content">
+           <h3 class="cc-card-title">
+            루디아권사회/
+여선교회
+           </h3>
+           <div>
+            <p class="cc-card-desc">
+             사랑의 섬김과 간절한 기도로 공동체를 따뜻하게 보듬는 아름다운 여성 공동체입니다.
+            </p>
+            <div class="cc-card-more">
+             <span class="cc-card-more-text">
+              View More
+             </span>
+             <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12h14">
+              </path>
+              <path d="m12 5 7 7-7 7">
+              </path>
+             </svg>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="cc-card" id="cc-card-12" style="width: 340px;">
+          <img alt="예람유치원" class="cc-card-img" src="/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg"/>
+          <div class="cc-card-overlay">
+          </div>
+          <div class="cc-card-content">
+           <h3 class="cc-card-title">
+            예람유치원
+           </h3>
+           <div>
+            <p class="cc-card-desc">
+             하나님의 사랑 안에서 아이들의 꿈과 지혜가 쑥쑥 자라나는 믿음의 첫 교육 터전입니다.
+            </p>
+            <div class="cc-card-more">
+             <span class="cc-card-more-text">
+              View More
+             </span>
+             <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12h14">
+              </path>
+              <path d="m12 5 7 7-7 7">
+              </path>
+             </svg>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="cc-card" id="cc-card-13" style="width: 340px;">
+          <img alt="예람수양관" class="cc-card-img" src="/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg"/>
+          <div class="cc-card-overlay">
+          </div>
+          <div class="cc-card-content">
+           <h3 class="cc-card-title">
+            예람수양관
+           </h3>
+           <div>
+            <p class="cc-card-desc">
+             도심을 벗어나 주님의 품 안에서 영혼의 안식과 깊은 영성을 회복하는 아름다운 쉼터입니다.
+            </p>
+            <div class="cc-card-more">
+             <span class="cc-card-more-text">
+              View More
+             </span>
+             <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12h14">
+              </path>
+              <path d="m12 5 7 7-7 7">
+              </path>
+             </svg>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="cc-card" id="cc-card-14" style="width: 340px;">
+          <img alt="한국기독교
+선교박물관" class="cc-card-img" src="/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg"/>
+          <div class="cc-card-overlay">
+          </div>
+          <div class="cc-card-content">
+           <h3 class="cc-card-title">
+            한국기독교
+선교박물관
+           </h3>
+           <div>
+            <p class="cc-card-desc">
+             한국 기독교 선교의 소중한 발자취와 신앙의 유산을 한눈에 돌아보는 역사의 현장입니다.
+            </p>
+            <div class="cc-card-more">
+             <span class="cc-card-more-text">
+              View More
+             </span>
+             <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12h14">
+              </path>
+              <path d="m12 5 7 7-7 7">
+              </path>
+             </svg>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </section>
+    </div>
+    <!-- TabbedGallery will go here -->
+    <div class="scroll-fade-up" id="tabbed-gallery-container">
+     <section class="tg-section">
+      <div class="tg-bg">
+       <img alt="" class="tg-bg-img" src="/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg"/>
+       <div class="tg-bg-overlay">
+       </div>
+      </div>
+      <div class="tg-content">
+       <div class="tg-header-row">
+        <div>
+         <span class="tg-label">
+          Gallery
+         </span>
+         <div class="tg-title-wrap">
+          <h2 class="tg-title">
+           동래중앙 앨범
+          </h2>
+          <div class="tg-tabs">
+           <button class="tg-tab-btn active" data-tab="event">
+            행사 앨범
+           </button>
+           <button class="tg-tab-btn" data-tab="newcomer">
+            새가족 앨범
+           </button>
+          </div>
+         </div>
+        </div>
+        <div class="tg-nav-wrap">
+         <div class="tg-progress-bar">
+          <div class="tg-progress-fill" id="tg-progress-fill" style="width: 0%;">
+          </div>
+         </div>
+         <button class="tg-nav-btn" disabled="" id="tg-prev-btn">
+          <svg class="cc-nav-icon" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+           <path d="m15 18-6-6 6-6">
+           </path>
+          </svg>
+         </button>
+         <button class="tg-nav-btn" id="tg-next-btn">
+          <svg class="cc-nav-icon" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+           <path d="m9 18 6-6-6-6">
+           </path>
+          </svg>
+         </button>
+        </div>
+       </div>
+       <div class="tg-track-wrap">
+        <div class="tg-track" id="tg-track" style="gap: 20px; transform: translateX(-0px);">
+         <div class="tg-item show" style="width: 310px;">
+          <div class="tg-img-box">
+           <img alt="2023 가을 부흥회" class="tg-img" src="/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg"/>
+           <div class="tg-item-overlay">
+            <div class="tg-item-info">
+             <p class="tg-item-caption">
+              2023 가을 부흥회
+             </p>
+             <p class="tg-item-date">
+              2023년 10월 15일
+             </p>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="tg-item show" style="width: 310px;">
+          <div class="tg-img-box">
+           <img alt="여름 성경 학교" class="tg-img" src="/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg"/>
+           <div class="tg-item-overlay">
+            <div class="tg-item-info">
+             <p class="tg-item-caption">
+              여름 성경 학교
+             </p>
+             <p class="tg-item-date">
+              2023년 8월 5일
+             </p>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="tg-item show" style="width: 310px;">
+          <div class="tg-img-box">
+           <img alt="성탄절 칸타타" class="tg-img" src="/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg"/>
+           <div class="tg-item-overlay">
+            <div class="tg-item-info">
+             <p class="tg-item-caption">
+              성탄절 칸타타
+             </p>
+             <p class="tg-item-date">
+              2023년 12월 24일
+             </p>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="tg-item show" style="width: 310px;">
+          <div class="tg-img-box">
+           <img alt="청년부 단기선교" class="tg-img" src="/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg"/>
+           <div class="tg-item-overlay">
+            <div class="tg-item-info">
+             <p class="tg-item-caption">
+              청년부 단기선교
+             </p>
+             <p class="tg-item-date">
+              2023년 7월 20일
+             </p>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="tg-item show" style="width: 310px;">
+          <div class="tg-img-box">
+           <img alt="추수감사절 예배" class="tg-img" src="/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg"/>
+           <div class="tg-item-overlay">
+            <div class="tg-item-info">
+             <p class="tg-item-caption">
+              추수감사절 예배
+             </p>
+             <p class="tg-item-date">
+              2023년 11월 19일
+             </p>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="tg-item show" style="width: 310px;">
+          <div class="tg-img-box">
+           <img alt="소그룹 성경 공부" class="tg-img" src="/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg"/>
+           <div class="tg-item-overlay">
+            <div class="tg-item-info">
+             <p class="tg-item-caption">
+              소그룹 성경 공부
+             </p>
+             <p class="tg-item-date">
+              2023년 7월 15일
+             </p>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </section>
+    </div>
+    <!-- Footer will go here -->
+    <div id="footer-container">
+     <footer class="ft-wrapper">
+      <div class="ft-container">
+       <div class="ft-row">
+        <div class="ft-left">
+         <div class="ft-logo-wrap">
+          <div class="ft-logo-box">
+           <span class="ft-logo-text">
+            동래
+           </span>
+          </div>
+          <div>
+           <span class="ft-title">
+            동래중앙교회
+           </span>
+          </div>
+         </div>
+         <div class="ft-info">
+          <span class="ft-info-line">
+           <span class="ft-info-label">
+            ADDRESS.
+           </span>
+           부산광역시 동래구 충렬대로202번가길 24 (수안동, 2-3번지)
+          </span>
+          <span class="ft-info-line">
+           <span class="ft-info-label">
+            TEL.
+           </span>
+           051-558-1191
+           <span class="ft-info-divider">
+            |
+           </span>
+           <span class="ft-info-label">
+            FAX.
+           </span>
+           051-555-8474
+          </span>
+         </div>
+        </div>
+        <div class="ft-right">
+         <span class="ft-copyright">
+          Copyright &copy; 2026 동래중앙교회
+         </span>
+         <span class="ft-credit">
+          All rights reserved. Designed by (주)스데반정보
+         </span>
+        </div>
+       </div>
+      </div>
+     </footer>
+    </div>
+   </div>
+  </div>
+  <script src="Main_v1.js">
+  </script>
+ </body>
 </html>
