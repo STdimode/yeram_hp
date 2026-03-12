@@ -29,12 +29,12 @@ function initHeroSlider() {
     // The prompt says: "외부 URL(http...)은 유지하고, 로컬 에셋은 /UserData/... 경로로 변환하세요."
     const slides = [
         {
-            image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg",
+            image: "https://images.unsplash.com/photo-1768569391908-5c92c83744f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaHVyY2glMjBpbnRlcmlvciUyMGVtcHR5JTIwcGV3cyUyMGFyY2hpdGVjdHVyZXxlbnwxfHx8fDE3NzMyMjUxNTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
             title: "은혜의 빛으로",
             subtitle: "Grace Community Church"
         },
         {
-            image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg",
+            image: "https://images.unsplash.com/photo-1589198234915-b57a9ad85d1e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXRoZWRyYWwlMjBzdGFpbmVkJTIwZ2xhc3MlMjB3aW5kb3clMjBsaWdodHxlbnwxfHx8fDE3NzMyMjUxNTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
             title: "함께 걷는 믿음의 길",
             subtitle: "Walking Together in Faith"
         }
@@ -315,8 +315,8 @@ function initInteractiveGrid() {
 
     // Notice bg image from original source was an imported asset, we use a placeholder or the provided format
     // Replace with provided format if given
-    const noticeBg = "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg";
-    const welcomeBg = "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg";
+    const noticeBg = "https://images.unsplash.com/photo-1501082123646-4978a639c397?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBjaHVyY2glMjBhcmNoaXRlY3R1cmUlMjBtaW5pbWFsfGVufDF8fHx8MTc3MzIyNTE1Nnww&ixlib=rb-4.1.0&q=80&w=1080";
+    const welcomeBg = "/UserData/yeram/Layouts/yeram_Layout_temp/images/a9f990c9275b65d453fabd77bda4140e722a2e8c.png";
 
     const svgUserPlus = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" class="igrid-icon"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" x2="19" y1="8" y2="14"/><line x1="22" x2="16" y1="11" y2="11"/></svg>`;
     const svgClock = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" class="igrid-icon"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`;
@@ -344,7 +344,7 @@ function initStickyHorizontalScroll() {
             verse: "마가복음10장46-52절",
             pastor: "정대훈 목사",
             date: "2026.03.08",
-            image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg",
+            image: "https://images.unsplash.com/photo-1728062816724-57b626d1affc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkcmFtYXRpYyUyMHNreSUyMHN0YXJzJTIwY2xvdWRzJTIwbW91bnRhaW5zfGVufDF8fHx8MTc3MzIzNTY0MHww&ixlib=rb-4.1.0&q=80&w=1080",
         },
         {
             title: "주일 찬양 예배",
@@ -352,7 +352,7 @@ function initStickyHorizontalScroll() {
             verse: "누가복음 9장57-62절",
             pastor: "강신영 목사",
             date: "2026.03.08",
-            image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg",
+            image: "https://images.unsplash.com/photo-1747079310346-1eb40f39bde0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnb2xkZW4lMjBzdW5zZXQlMjBjbG91ZHMlMjBuYXR1cmV8ZW58MXx8fHwxNzczMjM1NTY3fDA&ixlib=rb-4.1.0&q=80&w=1080",
         },
         {
             title: "수요말씀사경회",
@@ -360,7 +360,7 @@ function initStickyHorizontalScroll() {
             verse: "에베소서 2장11-22절",
             pastor: "박세영 목사",
             date: "2026.03.04",
-            image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg",
+            image: "https://images.unsplash.com/photo-1768938360590-bf49368f0e9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2Z0JTIwd2hpdGUlMjBjbG91ZHMlMjBibHVlJTIwc2t5JTIwcGVhY2VmdWx8ZW58MXx8fHwxNzczMjM1NTY3fDA&ixlib=rb-4.1.0&q=80&w=1080",
         },
         {
             title: "금요성령기도회",
@@ -368,11 +368,11 @@ function initStickyHorizontalScroll() {
             verse: "",
             pastor: "ooo 목사",
             date: "2026.03.13",
-            image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg",
+            image: "https://images.unsplash.com/photo-1655058402270-de7dd5838ed5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuaWdodCUyMHNreSUyMHN0YXJzJTIwZGFyayUyMGNsb3Vkc3xlbnwxfHx8fDE3NzMyMzU2Mzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
         }
     ];
 
-    const svgArrowRight = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shs-arrow-icon"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>`;
+    const svgArrowRight = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>`;
 
     let cardsHtml = '';
     cardsData.forEach(card => {
@@ -499,7 +499,7 @@ function initDynamicToggle() {
             title: "다음세대",
             subtitle: "Next Generation",
             description: "미래의 주역인 영유아부터 청년까지, 하나님의 말씀 안에서 꿈을 키우고 건강하게 성장하는 신앙 교육 공동체입니다.",
-            image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg",
+            image: "https://images.unsplash.com/photo-1518130064817-2bcb096c1303?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwYXBlciUyMGFpcnBsYW5lJTIwZmx5aW5nJTIwYmx1ZSUyMHNreXxlbnwxfHx8fDE3NzMyMzgxNTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
             links: ["영유아부", "유치부", "유년부", "소년부", "중등부", "고등부", "청년부"]
         },
         {
@@ -507,7 +507,7 @@ function initDynamicToggle() {
             title: "팀사역",
             subtitle: "Ministry",
             description: "국내외 선교, 문화 사역, 교육 및 봉사 등 각자의 은사에 맞춰 하나님의 사랑을 실천하고 세상을 섬기는 전문 사역 팀들의 모임입니다.",
-            image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg",
+            image: "https://images.unsplash.com/photo-1608782583532-c551f3a0e8ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwYXN0ZWwlMjBwaW5rJTIwYmx1ZSUyMGNvdHRvbiUyMGNhbmR5JTIwc2t5JTIwc3Vuc2V0fGVufDF8fHx8MTc3MzIzODA4N3ww&ixlib=rb-4.1.0&q=80&w=1080",
             links: ["국내선교", "해외선교", "문화사역", "예람전도대", "새가족 양육", "중보기도대", "늘푸른대학", "사회봉사"]
         },
         {
@@ -515,7 +515,7 @@ function initDynamicToggle() {
             title: "온라인 행정",
             subtitle: "Administration",
             description: "성도님들의 원활한 교회 활동을 위해 장소 및 차량 예약, 각종 증명서 발급 등을 언제 어디서나 간편하게 처리할 수 있는 지원 서비스입니다.",
-            image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg",
+            image: "https://images.unsplash.com/photo-1636569698616-94d5307b956b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsYXB0b3AlMjBjbG9zZXVwJTIwa2V5Ym9hcmQlMjBtaW5pbWFsJTIwY2xlYW58ZW58MXx8fHwxNzczMjM4MTU5fDA&ixlib=rb-4.1.0&q=80&w=1080",
             links: ["차량예약", "장소예약", "비품수리신청", "증명서 발급"]
         }
     ];
@@ -552,9 +552,7 @@ function initDynamicToggle() {
                         <div class="dt-more-wrap">
                             <button class="dt-more-btn">
                                 <span class="dt-more-text">VIEW MORE</span>
-                                <svg class="dt-more-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
-                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                             </button>
                         </div>
                     </div>
@@ -677,40 +675,40 @@ function initCommunityCards() {
             id: 1,
             title: "은장회/안수집사회/\n남선교회",
             description: "기도로 교회를 든든히 세우고 뜨거운 열정으로 헌신하며 본을 보이는 남성 공동체입니다.",
-            image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg"
+            image: "https://images.unsplash.com/photo-1673429249844-b14f29e619b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcm9zcyUyMHNpbGhvdWV0dGUlMjBjaHVyY2glMjByb29mdG9wfGVufDF8fHx8MTc3MzIyNTE1N3ww&ixlib=rb-4.1.0&q=80&w=1080"
         },
         {
             id: 2,
             title: "루디아권사회/\n여선교회",
             description: "사랑의 섬김과 간절한 기도로 공동체를 따뜻하게 보듬는 아름다운 여성 공동체입니다.",
-            image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg"
+            image: "https://images.unsplash.com/photo-1769184615259-e609796f63e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGFwZWwlMjB3aW5kb3clMjBsaWdodCUyMGJlYW0lMjByYXlzfGVufDF8fHx8MTc3MzIyNTE2MXww&ixlib=rb-4.1.0&q=80&w=1080"
         },
         {
             id: 3,
             title: "예람유치원",
             description: "하나님의 사랑 안에서 아이들의 꿈과 지혜가 쑥쑥 자라나는 믿음의 첫 교육 터전입니다.",
-            image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg"
+            image: "https://images.unsplash.com/photo-1567746512136-f005499a7575?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxraW5kZXJnYXJ0ZW4lMjBjbGFzc3Jvb20lMjBlbXB0eSUyMGNvbG9yZnVsfGVufDF8fHx8MTc3MzIyNTE2NXww&ixlib=rb-4.1.0&q=80&w=1080"
         },
         {
             id: 4,
             title: "예람수양관",
             description: "도심을 벗어나 주님의 품 안에서 영혼의 안식과 깊은 영성을 회복하는 아름다운 쉼터입니다.",
-            image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg"
+            image: "https://images.unsplash.com/photo-1771849316619-56a52f7a6f88?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZXRyZWF0JTIwY2VudGVyJTIwbW91bnRhaW4lMjBjYWJpbiUyMG5hdHVyZXxlbnwxfHx8fDE3NzMyMjUxNjV8MA&ixlib=rb-4.1.0&q=80&w=1080"
         },
         {
             id: 5,
             title: "한국기독교\n선교박물관",
             description: "한국 기독교 선교의 소중한 발자취와 신앙의 유산을 한눈에 돌아보는 역사의 현장입니다.",
-            image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg"
+            image: "https://images.unsplash.com/photo-1770819372115-dafe72a8c8b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtdXNldW0lMjBnYWxsZXJ5JTIwZXhoaWJpdGlvbiUyMGVtcHR5JTIwaGFsbHxlbnwxfHx8fDE3NzMyMjUxNjV8MA&ixlib=rb-4.1.0&q=80&w=1080"
         }
     ];
 
     const extCards = [...cards, ...cards, ...cards];
     const TOTAL = cards.length;
 
-    const svgChevronLeft = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cc-nav-icon"><path d="m15 18-6-6 6-6"/></svg>`;
-    const svgChevronRight = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cc-nav-icon"><path d="m9 18 6-6-6-6"/></svg>`;
-    const svgArrowRight = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>`;
+    const svgChevronLeft = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg>`;
+    const svgChevronRight = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>`;
+    const svgArrowRight = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>`;
 
     let trackHtml = '';
     extCards.forEach((card, i) => {
@@ -857,26 +855,26 @@ function initTabbedGallery() {
 
     const galleries = {
         event: [
-            { image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg", caption: "2023 가을 부흥회", date: "2023년 10월 15일" },
-            { image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg", caption: "여름 성경 학교", date: "2023년 8월 5일" },
-            { image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg", caption: "성탄절 칸타타", date: "2023년 12월 24일" },
-            { image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg", caption: "청년부 단기선교", date: "2023년 7월 20일" },
-            { image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg", caption: "추수감사절 예배", date: "2023년 11월 19일" },
-            { image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg", caption: "소그룹 성경 공부", date: "2023년 7월 15일" }
+            { image: "https://images.unsplash.com/photo-1522123472015-2d9f7ee5608d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdW5saWdodCUyMGNhc3RpbmclMjBzaGFkb3dzJTIwY29uY3JldGUlMjB3YWxsJTIwbWluaW1hbHxlbnwxfHx8fDE3NzMyMzY0MzR8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "2023 가을 부흥회", date: "2023년 10월 15일" },
+            { image: "https://images.unsplash.com/photo-1761166478784-dc565cffb472?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwYXN0ZWwlMjBibHVlJTIwc2t5JTIwY2xvdWRzJTIwc29mdHxlbnwxfHx8fDE3NzMyMzc0NjV8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "여름 성경 학교", date: "2023년 8월 5일" },
+            { image: "https://images.unsplash.com/photo-1764445578321-d11ed50fa9cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsaWdodCUyMGJsdWUlMjBvY2VhbiUyMGNhbG0lMjBzZXJlbmV8ZW58MXx8fHwxNzczMjM3NDY2fDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "성탄절 칸타타", date: "2023년 12월 24일" },
+            { image: "https://images.unsplash.com/photo-1660254149771-23c6a0bc5694?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwYXN0ZWwlMjBibHVlJTIwYWJzdHJhY3QlMjB0ZXh0dXJlJTIwbWluaW1hbHxlbnwxfHx8fDE3NzMyMzc0NjZ8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "청년부 단기선교", date: "2023년 7월 20일" },
+            { image: "https://images.unsplash.com/photo-1674043072969-2c63c0e1216e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2Z0JTIwYmx1ZSUyMGZsb3dlcnMlMjBoeWRyYW5nZWElMjBwYXN0ZWx8ZW58MXx8fHwxNzczMjM3NDY2fDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "추수감사절 예배", date: "2023년 11월 19일" },
+            { image: "https://images.unsplash.com/photo-1771700496753-09196abbad4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsaWdodCUyMGJsdWUlMjB3YXRlciUyMHJpcHBsZSUyMGNhbG18ZW58MXx8fHwxNzczMjM3NDY3fDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "소그룹 성경 공부", date: "2023년 7월 15일" }
         ],
         newcomer: [
-            { image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg", caption: "새가족 환영회", date: "2023년 9월 1일" },
-            { image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg", caption: "어린이 프로그램", date: "2023년 10월 1일" },
-            { image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg", caption: "봉사팀 오리엔테이션", date: "2023년 8월 1일" },
-            { image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg", caption: "교회 투어", date: "2023년 11월 1일" },
-            { image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg", caption: "중보기도", date: "2023년 12월 1일" },
-            { image: "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg", caption: "예배 안내", date: "2023년 1월 1일" }
+            { image: "https://images.unsplash.com/photo-1612457506498-e394426f27cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwYXN0ZWwlMjBibHVlJTIwbW91bnRhaW4lMjBmb2clMjBtaXN0eXxlbnwxfHx8fDE3NzMyMzc0Njd8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "새가족 환영회", date: "2023년 9월 1일" },
+            { image: "https://images.unsplash.com/photo-1742403412928-c077668aad2e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2Z0JTIwYmx1ZSUyMG1hcmJsZSUyMHRleHR1cmUlMjBzbW9vdGh8ZW58MXx8fHwxNzczMjM3NDY4fDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "어린이 프로그램", date: "2023년 10월 1일" },
+            { image: "https://images.unsplash.com/photo-1628880635807-fa5bf0df26b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpY2UlMjBibHVlJTIwZnJvemVuJTIwY3J5c3RhbCUyMGNsb3NlfGVufDF8fHx8MTc3MzIzNzQ2OHww&ixlib=rb-4.1.0&q=80&w=1080", caption: "봉사팀 오리엔테이션", date: "2023년 8월 1일" },
+            { image: "https://images.unsplash.com/photo-1649711115004-4c5215684b08?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwYWxlJTIwYmx1ZSUyMGdyYWRpZW50JTIwd2FsbCUyMHBhaW50fGVufDF8fHx8MTc3MzIzNzQ2OHww&ixlib=rb-4.1.0&q=80&w=1080", caption: "교회 투어", date: "2023년 11월 1일" },
+            { image: "https://images.unsplash.com/photo-1641651495195-f1d8b6f63121?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2Z0JTIwYmx1ZSUyMGZlYXRoZXIlMjBkZWxpY2F0ZSUyMHBhc3RlbHxlbnwxfHx8fDE3NzMyMzc0Njl8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "중보기도", date: "2023년 12월 1일" },
+            { image: "https://images.unsplash.com/photo-1544032735-4ed3ae9685e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxibHVlJTIwcGFzdGVsJTIwZGF3biUyMGhvcml6b24lMjBtaW5pbWFsfGVufDF8fHx8MTc3MzIzNzQ2OXww&ixlib=rb-4.1.0&q=80&w=1080", caption: "예배 안내", date: "2023년 1월 1일" }
         ]
     };
 
-    const bgUrl = "/UserData/yeram/Layouts/yeram_Layout_temp/images/placeholder.jpg";
-    const svgChevronLeft = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cc-nav-icon"><path d="m15 18-6-6 6-6"/></svg>`;
-    const svgChevronRight = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cc-nav-icon"><path d="m9 18 6-6-6-6"/></svg>`;
+    const bgUrl = "https://images.unsplash.com/photo-1741663888387-d7510d1253b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsaWdodCUyMGJsdWUlMjBzaWxrJTIwZmFicmljJTIwZmxvd2luZ3xlbnwxfHx8fDE3NzMyMzc0NzB8MA&ixlib=rb-4.1.0&q=80&w=1080";
+    const svgChevronLeft = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg>`;
+    const svgChevronRight = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>`;
 
 
 
