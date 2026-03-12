@@ -435,6 +435,8 @@ function initStickyHorizontalScroll() {
         maxTranslate = updateLayout();
         handleScroll();
     });
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
 
     function handleScroll() {
         if (!section) return;

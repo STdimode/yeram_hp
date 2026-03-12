@@ -1042,7 +1042,9 @@ External fonts fallback
     flex-shrink: 0;
     position: relative;
     overflow: hidden;
-    border-radius: 0.888rem; /* 1rem */
+    border-radius: 1rem;
+    isolation: isolate;
+    -webkit-mask-image: -webkit-radial-gradient(white, black); /* 1rem */
     cursor: pointer;
     width: 16.25rem;
     height: 15.3125rem; /* Math.round(340 * 0.72) */
@@ -1291,6 +1293,9 @@ External fonts fallback
     position: relative;
     aspect-ratio: 4 / 3;
     overflow: hidden;
+    border-radius: 1rem;
+    isolation: isolate;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 
 .tg-img {
