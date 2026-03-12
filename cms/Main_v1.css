@@ -1040,7 +1040,8 @@ External fonts fallback
     overflow: hidden;
     border-radius: 1rem;
     isolation: isolate;
-    -webkit-mask-image: -webkit-radial-gradient(white, black); /* 1rem */
+    -webkit-mask-image: -webkit-radial-gradient(white, black); /* Safari fix */
+    mask-image: radial-gradient(white, black);
     cursor: pointer;
     width: 16.25rem;
     height: 15.3125rem; /* Math.round(340 * 0.72) */
@@ -1059,6 +1060,7 @@ External fonts fallback
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 1rem;
     transition: transform 0.7s;
 }
 
@@ -1069,6 +1071,7 @@ External fonts fallback
 .cc-card-overlay {
     position: absolute;
     inset: 0;
+    border-radius: 1rem;
     background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%);
     transition: background 0.5s;
 }
@@ -1292,12 +1295,14 @@ External fonts fallback
     border-radius: 1rem;
     isolation: isolate;
     -webkit-mask-image: -webkit-radial-gradient(white, black);
+    mask-image: radial-gradient(white, black);
 }
 
 .tg-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 1rem;
     transition: transform 0.7s;
 }
 
