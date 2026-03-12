@@ -566,6 +566,7 @@ function initDynamicToggle() {
 
 
     const section = document.getElementById('dt-section');
+    if (section) section.style.height = scrollHeight + 'vh';
     const stackContainer = document.getElementById('dt-stack-container');
     const cards = [];
     categories.forEach((_, i) => {

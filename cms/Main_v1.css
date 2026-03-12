@@ -52,7 +52,6 @@ img, svg {
     margin-left: -50vw;
     margin-right: -50vw;
     min-height: 100vh;
-    overflow-x: hidden;
 }
 
 /* Font Faces */
@@ -1583,3 +1582,5 @@ External fonts fallback
 .tg-content { padding: 0 4rem; }
 .ft-container { padding: 3rem 4rem; }
 }
+
+.scroll-fade-up.no-transform { transform: none !important; }
