@@ -406,7 +406,7 @@ function initStickyHorizontalScroll() {
         const vw = window.innerWidth;
         const cardWidth = vw < 768 ? vw * 0.75 : vw < 1024 ? 420 : 600;
         const gap = vw < 768 ? 24 : vw < 1024 ? 32 : 48;
-        const rightPadding = vw * 0.1;
+        const rightPadding = vw * 0.3;
         const sidepadding = vw < 768 ? 24 : vw < 1024 ? 40 : 64;
 
         cards.forEach(card => {
@@ -449,7 +449,7 @@ function initStickyHorizontalScroll() {
         progress = Math.max(0, Math.min(1, progress));
 
         // Horizontal transform logic
-        let horizontalProgress = (progress - 0.15) / 0.55;
+        let horizontalProgress = (progress - 0.15) / 0.75;
         horizontalProgress = Math.max(0, Math.min(1, horizontalProgress));
         const translateX = -horizontalProgress * maxTranslate;
         scrollWrap.style.transform = `translateX(${translateX}px)`;
